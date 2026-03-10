@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episka märken</title>
+    <style>
+        html {
+            background-color: rgba(36, 44, 2);
+            margin: 0;
+            height: 100%;
+        }
+
+        body {}
+
+        h1 {
+            background-color: rgba(255, 255, 255, 0.418);
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.418);
+
+        }
+
+        #container {
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+        }
+
+        article {
+            background-color: rgba(255, 255, 255, 0.418);
+            border-color: rgb(83, 0, 94);
+            border-width: 4px;
+            border-style: solid;
+            padding: 1vh;
+            margin-top: 1vh;
+            margin-bottom: 1vh;
+        }
+
+        table {
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+            border-radius: 15px;
+        }
+
+        td {
+            border-style: solid;
+            border-color: black;
+            border-width: 1px;
+            border-collapse: collapse;
+        }
+    </style>
+    <script>
+
+        async function Start(a) {
+            const response = await fetch("marken.json");
+            const data = await response.json();
+
+            generated = ''
+            i = 0
+            for (let patch of data) {
+                i += 1
+                generated += `
+                <article>
+                    <h2>${patch.name}</h2>
+                    <p>${patch.description}</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Införskaffat:</td>
+                                <td>Nummer:</td>
+                                <td>Av:</td>
+                                <td>Plats:</td>
+                                <td>Pris:</td>
+                                <td>Betyg:</td>
+                                <td>Påsytt:</td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <td>${patch.got}</td>
+                            <td>${patch.number}</td>
+                            <td>${patch.distributor}</td>
+                            <td>${patch.place}</td>
+                            <td>${patch.price}</td>
+                            <td>${patch.grade}</td>
+                            <td>${patch.sown}</td>
+                        </tr>
+                    </table>
+                    <img src="${patch.img}" alt="En bild på märket saknas :(" style="float: right;">
+                </article>
+                `
+            }
+            document.getElementById('container').innerHTML = generated
+            document.getElementById('amount').innerHTML = data.length
+        }
+
+        Start()
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Mina märken</h1>
+        <p>Antal unika märken: <span id="amount"></span></p>
+    </header>
+    <div id="container">
+    </div>
+</body>
+
+</html>
