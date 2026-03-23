@@ -826,5 +826,53 @@
         "place": "oaSen",
         "grade": "4/5",
         "number": "68"
+    },
+    {
+        "name": "Tekniska högskolans studentkår",
+        "img": null,
+        "description": "Köpt samtidigt som min GIS bok.",
+        "price": "25? kr",
+        "got": "26-03-16",
+        "sown": "Nej",
+        "distributor": "Kårbokhandeln",
+        "place": "Kårbokhandeln",
+        "grade": "3/5",
+        "number": "69"
+    },
+    {
+        "name": "Det enda hemsläppet jag har är släpade kurser, F",
+        "img": null,
+        "description": "Envarrren 😅",
+        "price": "25 kr",
+        "got": "26-03-20",
+        "sown": "Nej",
+        "distributor": "Maskin",
+        "place": "Smörjis",
+        "grade": "4/5",
+        "number": "70"
+    },
+    {
+        "name": "M&M's",
+        "img": null,
+        "description": "M:s sektionsmärke är lite för bra.",
+        "price": "25 kr",
+        "got": "26-03-20",
+        "sown": "Nej",
+        "distributor": "Maskin",
+        "place": "Smörjis",
+        "grade": "3/5",
+        "number": "70"
+    },
+    {
+        "name": "MellodifestiVALen 2026",
+        "img": null,
+        "description": "Bogquzzin kom med 😎\n Osquar mutter skulle vunnit.",
+        "price": "30 kr",
+        "got": "26-03-20",
+        "sown": "Nej",
+        "distributor": "Quarnevalen",
+        "place": "Puben, Nymble",
+        "grade": "5/5",
+        "number": "72"
     }
 ]
