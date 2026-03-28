@@ -24,18 +24,21 @@
         }
 
         #container {
-            padding-top: 1vh;
-            padding-bottom: 1vh;
         }
 
         article {
-            background-color: rgba(255, 255, 255, 0.418);
+            background-color: rgba(46, 68, 45);
             border-color: rgb(83, 0, 94);
             border-width: 4px;
             border-style: solid;
             padding: 1vh;
             margin-top: 1vh;
             margin-bottom: 1vh;
+            display: grid;
+            justify-content: space-between;
+            align-items: start;
+            grid-template-columns: auto auto;
+            width: 90vw;
         }
 
         table {
@@ -43,6 +46,7 @@
             border-color: black;
             border-width: 1px;
             border-radius: 15px;
+            width: 96vw;
         }
 
         td {
@@ -50,6 +54,29 @@
             border-color: black;
             border-width: 1px;
             border-collapse: collapse;
+        }
+
+        h2, p, table {
+            grid-column-start: 1;
+        }
+
+        img {
+            margin: 2%;
+            grid-row-start: 1;
+            grid-row-end: 4;
+            grid-column-start: 2;
+            max-height: 40vh;
+            max-width: 40vh;
+        }
+
+        @media screen and (max-width: 480px) {
+        img {
+            grid-column-start: 1;
+            grid-row-start: 4;
+            grid-row-end: 5;
+            max-height: 40vh;
+            max-width: 40vh;
+        }
         }
     </style>
     <script>
@@ -88,7 +115,7 @@
                             <td>${patch.sown}</td>
                         </tr>
                     </table>
-                    <img src="${patch.img}" alt="En bild på märket saknas :(" style="float: right;">
+                    <img src="img/${patch.img}.jpg" alt="En bild på märket saknas :(">
                 </article>
                 `
             }

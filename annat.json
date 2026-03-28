@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Studentmössa",
+        "img": null,
+        "description": "I Uppsala model som det ska vara.",
+        "price": "750 kr",
+        "got": "?",
+        "sown": "",
+        "distributor": "CTH ericson",
+        "place": "Online",
+        "grade": "4/5",
+        "number": "1"
+    },
+    {
+        "name": "Flygflaska",
+        "img": null,
+        "description": "Dansade nølledansen med en flygare på kön in, de verkligen snor allt vi gör bara pga vår buteljgrön. Körde också S24:s nølledans väl inne på TC.<br><br>Enligt marknadsföring är den för vatten, saft, kaffe, oboy, kokosvatten eller te.",
+        "price": "200 kr",
+        "got": "26-03-27",
+        "sown": "",
+        "distributor": "Merch26/KFK",
+        "place": "TC",
+        "grade": "5/5",
+        "number": "2"
+    }
+]
